@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+env/
+venv/
+myenv/
+.venv/
+.Python
+Python311/
+
+# Build/Distribution
+build/
+dist/
+*.egg-info/
+*.spec
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+
+# Database/Generated Data
+*.db
+*.sqlite3
+shops.db
+shops_data.json
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs/Temp
+*.log
+*.tmp
+*.bak
+
+# Extra Files
+Extra Files/
+*.pdf
+
+# Optional: ignore images if not needed
+# assets/
+# icons/
