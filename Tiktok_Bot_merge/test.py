@@ -1,7 +1,9 @@
 # from helper import get_product_from_csv
 import os
+from dotenv import load_dotenv
 
-# username="hotstar"
+# Load environment variables from .env file
+load_dotenv()
 # product_file_path = f"./nameofcreator/{username}/productname.csv"
 # productlist = get_product_from_csv(product_file_path)
 # for i in range(len(productlist)-1):
@@ -13,6 +15,7 @@ import os
 from utils import *
 from xpaths import *
 from helper import *
+import os
 
 from selenium.webdriver.chrome.options import Options
 
@@ -82,7 +85,7 @@ def openchrome(username):
             passwordData = input("Enter your password: ")
             autologin(driver, username, emailData, passwordData)
             print("Successfully logged in.")
-            export_cookies(driver, username)
+            #export_cookies(driver, username)
             time.sleep(random.randint(5, 7))
         if cookies_available:
             print("Page loaded. Adding cookies to the browser session...")
@@ -158,7 +161,7 @@ def report(username, user_count):
     # Create a new instance of the bot with intents
     bot = commands.Bot(command_prefix="!", intents=intents)
 
-    # Replace this with your actual bot token
+    # Get Discord bot token from environment variable
     TOKEN = os.getenv('DISCORD_BOT_TOKEN', '')
 
     @bot.event

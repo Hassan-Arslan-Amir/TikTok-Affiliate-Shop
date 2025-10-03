@@ -27,6 +27,7 @@ dist/
 *.sqlite3
 shops.db
 shops_data.json
+.env
 
 # OS/Editor
 .DS_Store
